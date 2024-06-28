@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="custom_comikha_header_section">
+            <div class="header" t-att-style="report_header_style_extend">
+                <div>
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" class="float-start" alt="Logo" style="width:205px;margin-top:-30px"/>
+                    <div class="float-start company_address">
+                        <ul class="list-unstyled" name='company_address_list'>
+                            <li style="font-size:26px;margin-top:-2px">
+                                <b>Coopérative Minière Khaff Marne (COMIKHA)</b>
+                            </li>
+                            <li style="font-size:14px;line-height: 1.25;margin-top:2px;">Arrêté Ministériel n° 0030/CAB.MIN/MINES/01/2018 DU 20/01/2018</li>
+                            <li style="font-size:14px;line-height: 1.25;">Certificat d'immatriculation no 254/SGI/DAP/100/007/2021</li>
+                            <li style="font-size:14px;line-height: 1.25;">ID. NAT : 04-B0500-N8063D</li>
+                            <li style="font-size:14px;line-height: 1.25;">Adresse : No17314 du croisement des avenues Biayi et de la libération, Q/Kalubwe, C/Lubumbashi,</li>
+                            <li style="font-size:14px;line-height: 1.25;">V/Lubumbashi, Province du Haut-Katanga RDC.</li>
+                            <li style="font-size:14px;line-height: 1.25;">Téléphone : +243992865206 et 815983329</li>
+                            <li style="font-size:14px;line-height: 1.25;">E-mail : <span style="color:blue;"><u>comikha.scoop@gmail.com</u></span></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="container justify-text clearfix">
+                        <img src="/website_account_extension/static/src/img/header_design.png" style="width:100%;margin-left:-5px;margin-top:-15px"/>
+                    </div>
+                    <div class="clearfix mb8"/>
+                </div> 
+            </div>   
+        </template>
+
+        <template inherit_id="web.external_layout_striped" id="add_header">
+            <xpath expr="//div" position="replace">
+                <t t-call="website_account_extension.custom_comikha_header_section"/>
+            </xpath>
+            <xpath expr="//div[2]" position="replace"/>
+        </template>
+
+        <template id="report_membership_form_view">
+            <t t-call="web.external_layout">
+                <t t-set="o" t-value="o.with_context(lang=lang)" />
+                
+                <div class="container">
+                    <table style="width:100%;margin-top:-20px">
+                        <tr style="border: 0px;background:white">
+                            <td style="width:70%;border: 0px;">
+                                <p style="font-size:24px;line-height: 1.8;margin:0;text-align:center;"><b>FICHE D'ADHÉSION À LA COMIKHA</b></p>
+                                <p style="font-size: 20px;line-height: 1.8"><b>I. Identités</b></p>
+                            </td>
+                            <td style="width:30%;border: 0px;text-align:center;">
+                                <img src="/website_account_extension/static/src/img/profile.jpg" style="height:110px;margin-top:20px"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="container justify-text" style="font-family:sans-serif">
+                    <p style="font-size:14px;">Nom et Post-nom:………….………………………………………………….…Prénom : ………..… .………………
+                        Lieu et date de naissance :……………….…………………………Nationalité …………………..………….…..……
+                        Profession :………………………………………………….………………………..…….……….…………………..
+                        Adresse : ………………………………………………………………………………..…..…….….………………….
+                        ……………………………………………………………………………………….....…………….…………………
+                        Code postale : ……………Numéro de téléphone : ………….…………….Adresse mail : ………….….……………..</p>
+                    
+                        
+                    <p style="line-height: 1.8;font-size: 20px"><b>II. Informations d'adhésion.</b></p>
+
+                    <p style="font-size:14px;"><input type="checkbox"></input> Membre d'honneur de soutien
+                        <![CDATA[&emsp;]]><![CDATA[&emsp;]]><![CDATA[&emsp;]]> <input type="checkbox"></input> Membre effectif
+                        <![CDATA[&emsp;]]><![CDATA[&emsp;]]><![CDATA[&emsp;]]> <input type="checkbox"></input> Négociant
+                        <![CDATA[&emsp;]]><![CDATA[&emsp;]]><![CDATA[&emsp;]]> <input type="checkbox"></input> Exploitant minier artisanal</p>
+                    
+                    <p style="font-size:14px;">Je déclare par la présente, souhaite devenir membre la Coopérative Minière Khaff Marne (COMIKHA) pour la
+                        soutenir dans ses activités et projets.</p>
+                   
+                    <p style="font-size:14px;">À ce titre, je déclare reconnaître l'objet de la COMIKHA, et avoir accepté les prescrits des Statuts et règlement d'ordre
+                    intérieur. J'ai pris bonne note des droits et des devoirs relatifs aux membres de la COMIKHA, et m'engage à protéger
+                    l'environnement et les biens communautaires ainsi qu'à traiter toutes les personnes avec dignité, respect et sans
+                    discrimination en général, et des personnes vulnérables à savoir des femmes, enfants, vieillard et personnes vivant
+                    avec handicap, en particulier.</p>
+                   
+                    <p style="font-size:14px;">M'engage à faire rapport et rendre compte qu'au président de la COMIKHA des taches qui me seront (sont) assignés
+                    et a ne pas diffuser ni exploiter a d'autres fins les documents ou informations relatifs(ves) à la COMIKHA en tant
+                    structure, a ses activités et projets. Et accepte de verser annuellement ma cotisation.</p>           
+                    
+                    <p style="font-size:14px;">Le montant de la cotisation équivalent en franc congolais a 10$/an, payable selon les dispositions statutaires et
+                    règlementaires de la COMIKHA.</p>   
+                    
+                    <p style="font-size:14px;">
+                        <input type="checkbox"></input> Première adhésion<![CDATA[&emsp;]]><![CDATA[&emsp;]]>
+                        <input type="checkbox"></input> Réadhésion<![CDATA[&emsp;]]><![CDATA[&emsp;]]>
+                        <input type="checkbox"></input> Don on libre d'un montant ..............CDF/USD
+                    </p>
+
+                    <p style="line-height: 1.8;font-size: 20px"><b>III. Mode de règlement</b></p>
+                    <p style="font-size:14px;">
+                        <input type="checkbox"></input> Virement bancaire<![CDATA[&emsp;]]>
+                        <input type="checkbox"></input> Par chèque à l'ordre de la COMIKHA<![CDATA[&emsp;]]>
+                        <input type="checkbox"></input> En espèce<![CDATA[&emsp;]]><br/>
+                        Dénomination de la banque : Equity Bank BCDC<br/>
+                        Intitulé du compte : Coopérative minière Khaff Marne (COMIKHA)<br/>
+                        Numéro de Compte : 00011-05016-6200002913787 USD
+                    </p>
+                    <p style="font-size:14px;text-align:right">
+                        Fait et signé à ……….……..., le …....…/…..…/…...….<br/>
+                        Nom et signature de l'adhérent
+                    </p>
+
+                    <p style="line-height: 1.8;;font-size: 20px"><b>IV. Reserve a la COMIKHA</b></p>
+                    <p style="font-size:14px;line-height: 1.8;margin-bottom: -20px;">
+                        <input type="checkbox" ></input> Avis favorable, N° d'enregistrement du membre :……………………….………………………<br/>
+                        <input type="checkbox" ></input> Avis défavorable
+                    </p>
+                    <p style="font-size:14px;text-align:right">
+                        Fait à …………………… le………………
+                    </p>
+                    <p style="font-size:14px;text-align:right;">
+                        Nom et signature du président<br/>
+                        (ou de son représentant)
+                    </p>
+                </div>
+
+
+                <div style="page-break-before:always;">
+                </div>
+                
+                <div class="container justify-text" style="font-family:Arial">
+                    <p style="font-size:24px;text-align:center;line-height: 1.8;"><b>REÇU POUR ADHÉSION</b></p>
+                    <p style="line-height: 3.5;font-size: 16px;text-align:center"><b>A remplir par l'association en deux exemplaires (une copie à remettre à l'adhérent)</b></p>
+                    <p style="font-size:14px;">
+                        Je, soussigné(e) …………………………………………………………, déclare par la présente avoir reçu le bulletin d'adhésion de :<br/>
+                        Prénom :……………………………………………………………………….………………….<br/>
+                        Nom :…………………………………………………………………………………………….<br/>
+                        ainsi que sa cotisation et l'ensemble des informations demandées.
+                    </p>
+
+                    <p style="font-size:14px;">
+                        L'adhésion du membre susnommé est ainsi validée. Ce reçu confirme la qualité de membre du postulant, et ouvre 
+                        droit à la participation à l'assemblée générale de l'association.
+                    </p>
+                    <p style="font-size:14px;text-align:right">
+                        Fait à …………………… le………………
+                    </p>
+                    <p style="font-size:14px;text-align:center;">
+                        <b>Pour la comptabilité</b><br/>
+                        (Nom et signature)
+                    </p>
+                    
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <p style="font-size:14px;text-align:right">
+                        <b>Visant du Président</b>
+                    </p>
+                </div>
+                
+                
+            </t>
+        </template>
+        <template id="report_membership_form">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="o.partner_id.lang"/>
+                    <t t-call="website_account_extension.report_membership_form_view" t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+        <!-- QWeb Reports -->
+        <record id="comikha_membership_form" model="ir.actions.report">
+            <field name="name">COMIKHA MEMBERSHIP FORM</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">website_account_extension.report_membership_form</field>
+            <field name="report_file">website_account_extension.report_membership_form</field>
+            <field name="print_report_name">(object._get_report_base_filename())</field>
+            <field name="attachment"/>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="website_account_extension.paperformat_membership_form"/>
+            <field name="groups_id" eval="[(4, ref('account.group_account_invoice')),
+ (4, ref('account.group_account_readonly'))]"/>
+        </record>
+    </data>
+</odoo>        

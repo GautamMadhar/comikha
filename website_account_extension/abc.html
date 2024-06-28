@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche d'Adhésion à la COMIKHA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .section input, .section textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .checkbox-group label {
+            font-weight: normal;
+        }
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .signature-section div {
+            width: 45%;
+        }
+        .bank-details {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>FICHE D'ADHÉSION À LA COMIKHA</h1>
+
+    <div class="section">
+        <h2>I. Identités</h2>
+        <label for="nom">Nom et Post-nom:</label>
+        <input type="text" id="nom" name="nom">
+
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" name="prenom">
+
+        <label for="naissance">Lieu et date de naissance:</label>
+        <input type="text" id="naissance" name="naissance">
+
+        <label for="nationalite">Nationalité:</label>
+        <input type="text" id="nationalite" name="nationalite">
+
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" name="profession">
+
+        <label for="adresse">Adresse:</label>
+        <textarea id="adresse" name="adresse" rows="3"></textarea>
+
+        <label for="code_postale">Code postale:</label>
+        <input type="text" id="code_postale" name="code_postale">
+
+        <label for="telephone">Numéro de téléphone:</label>
+        <input type="tel" id="telephone" name="telephone">
+
+        <label for="email">Adresse mail:</label>
+        <input type="email" id="email" name="email">
+    </div>
+
+    <div class="section">
+        <h2>II. Informations d'adhésion</h2>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="adhesion_type" value="membre_honneur"> Membre d'honneur de soutien</label>
+            <label><input type="checkbox" name="adhesion_type" value="membre_effectif"> Membre effectif</label>
+            <label><input type="checkbox" name="adhesion_type" value="negociant"> Négociant</label>
+            <label><input type="checkbox" name="adhesion_type" value="exploitant_minier"> Exploitant minier artisanal</label>
+        </div>
+        <p>Je déclare par la présente, souhaite devenir membre la Coopérative Minière Khaff Marne (COMIKHA) pour la soutenir dans ses activités et projets.</p>
+        <p>À ce titre, je déclare reconnaître l'objet de la COMIKHA, et avoir accepté les prescrits des Statuts et règlement d'ordre intérieur. J'ai pris bonne note des droits et des devoirs relatifs aux membres de la COMIKHA, et m'engage à protéger l'environnement et les biens communautaires ainsi qu'à traiter toutes les personnes avec dignité, respect et sans discrimination en général, et des personnes vulnérables à savoir des femmes, enfants, vieillard et personnes vivant avec handicap, en particulier.</p>
+        <p>M'engage à faire rapport et rendre compte qu'au président de la COMIKHA des taches qui me seront (sont) assignés et a ne pas diffuser ni exploiter a d'autres fins les documents ou informations relatifs(ves) à la COMIKHA en tant structure, a ses activités et projets. Et accepte de verser annuellement ma cotisation.</p>
+        <p>Le montant de la cotisation équivalent en franc congolais a 10$/an, payable selon les dispositions statutaires et règlementaires de la COMIKHA.</p>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="adhesion_initiale" value="premiere"> Première adhésion</label>
+            <label><input type="checkbox" name="adhesion_initiale" value="readhesion"> Réadhésion</label>
+            <label><input type="checkbox" name="donation" value="donation"> Don on libre d'un montant ..............CDF/USD</label>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>III. Mode de règlement</h2>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="payment_mode" value="virement"> Virement bancaire</label>
+            <label><input type="checkbox" name="payment_mode" value="cheque"> Par chèque à l'ordre de la COMIKHA</label>
+            <label><input type="checkbox" name="payment_mode" value="espece"> En espèce</label>
+        </div>
+        <div class="bank-details">
+            <p>Dénomination de la banque : Equity Bank BCDC</p>
+            <p>Intitulé du compte : Coopérative minière Khaff Marne (COMIKHA)</p>
+            <p>Numéro de Compte : 00011-05016-6200002913787 USD</p>
+        </div>
+    </div>
+
+    <div class="section signature-section">
+        <div>
+            <label for="location_date">Fait et signé à:</label>
+            <input type="text" id="location_date" name="location_date">
+        </div>
+        <div>
+            <label for="signature">Nom et signature de l'adhérent:</label>
+            <input type="text" id="signature" name="signature">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>IV. Reserve a la COMIKHA</h2>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="avis" value="favorable"> Avis favorable, N° d'enregistrement du membre :</label>
+            <input type="text" id="enregistrement" name="enregistrement">
+        </div>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="avis" value="defavorable"> Avis défavorable</label>
+        </div>
+        <div class="signature-section">
+            <div>
+                <label for="president_location_date">Fait à:</label>
+                <input type="text" id="president_location_date" name="president_location_date">
+            </div>
+            <div>
+                <label for="president_signature">Nom et signature du président (ou de son représentant):</label>
+                <input type="text" id="president_signature" name="president_signature">
+            </div>
+        </div>
+    </div>
+
+    <button class="submit-button">Soumettre</button>
+</div>
+
+</body>
+</html>
