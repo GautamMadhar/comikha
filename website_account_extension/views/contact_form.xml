@@ -1,0 +1,234 @@
+<odoo>
+    <template id="contact_form_comikha" name="Comikha Contact Form">
+        <t t-call="website.layout">
+            <div>
+                <img src="custom_form_snippet/static/kha1.png" alt="banner"/>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <h2 class="text-center" style="color:rgba(93, 228, 17, 1)">Please complete data identity</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="/contact-form" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="name">Name and Post-Name :</label>    
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="name" id="name"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="birth_date">Date of birth</label> 
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="date" class="form-control" name="birth_date" id="birth_date"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="nationality">Nationality</label> 
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="nationality" id="nationality"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="address">Address</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="address" id="address"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="phone">Phone</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="phone" id="phone"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="first_name">First name:</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="first_name" id="first_name"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="birth_place">Place of birth:</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="birth_place" id="birth_place"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="occupation">Occupation:</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="occupation" id="occupation"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="zipcode">ZIP code:</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="zipcode" id="zipcode"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4">
+                                            <label for="email">E-mail:</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="email" id="email"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h2 class="text-center mt-5" style="color:rgba(93, 228, 17, 1)">
+                                    What is the purpose of your membership?
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <div class="d-flex  justify-content-center">
+                                     <div class="form-check me-md-3">
+                                        <label for="full_member">Full member</label>
+                                        <input type="radio" class="form-check-input" name="options" id="full_member" value="full_member"/>
+                                    </div>
+                                    <div class="form-check me-md-3">
+                                        <label for="trader">Trader</label>
+                                        <input type="radio" class="form-check-input" name="options" id="trader" value="trader"/>
+                                    </div>
+                                    <div class="form-check me-md-3">
+                                        <label for="mining_operator">Artisanal mining operator</label>
+                                        <input type="radio" class="form-check-input" name="options" id="mining_operator" value="mining_operator"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div id="option1Fields" class="additional-fields" style="display:none;">
+                                    <h3 style="color:rgba(93, 228, 17, 1)">Attachments</h3>
+                                    <div class="row mt-5 w-50">
+                                        <div class="col-md-5" for="picture"><label>Your picture :</label></div>
+                                        <div class="col-md-7"><input type="file" class="form-control" name="picture" id="picture"/></div>
+                                    </div>
+                                    <div class="row mt-3 w-50">
+                                        <div class="col-md-5" for="i_card"><label>ID card :</label></div>
+                                        <div class="col-md-7"><input type="file" class="form-control" name="i_card" id="i_card"/></div>
+                                    </div>
+                                    <h3 class="text-center mt-5" style="color:rgba(93, 228, 17, 1)">Membership amount per month</h3>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <div class="d-flex justify-content-center align-items-center" style="background-color:rgba(93, 228, 17, 1);color:white;width:60px;height:60px;border-radius:20px;"><span><b>10 USD</b></span></div>
+                                    </div>
+                                    <h4 class="text-center mt-5" style="color:rgba(93, 228, 17, 1)">Signature :</h4>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <div class="d-flex justify-content-center align-items-center" style="background-color:grey;color:white;width:200px;height:60px;border-radius:20px;"></div>
+                                    </div>
+                                    <div class="text-center mt-3 mb-5">
+                                        <button type="submit" class="btn text-center" style="background-color:rgba(93, 228, 17, 1);color:white;width:150px;height:35px;border-radius:7px;">To validate</button>
+                                    </div>
+                                </div>
+                                <div id="option2Fields" class="additional-fields" style="display:none;">
+                                    <h3 style="color:rgba(93, 228, 17, 1)">Attachments</h3>
+                                    <div class="row mt-5 w-50">
+                                        <div class="col-md-5" for="picture"><label>Your picture :</label></div>
+                                        <div class="col-md-7"><input type="file" class="form-control" name="picture" id="picture"/></div>
+                                    </div>
+                                    <div class="row mt-3 w-50">
+                                        <div class="col-md-5" for="i_card"><label>ID card :</label></div>
+                                        <div class="col-md-7"><input type="file" class="form-control" name="i_card" id="i_card"/></div>
+                                    </div>
+                                    <div class="row mt-3 w-50">
+                                        <div class="col-md-5" for="trader_card"><label>Trader card :</label></div>
+                                        <div class="col-md-7"><input type="file" class="form-control" name="trader_card" id="trader_card"/></div>
+                                    </div>
+                                    <h3 class="text-center mt-5" style="color:rgba(93, 228, 17, 1)">Membership amount per month</h3>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <div class="d-flex justify-content-center align-items-center" style="background-color:rgba(93, 228, 17, 1);color:white;width:60px;height:60px;border-radius:20px;"><span><b>10 USD</b></span></div>
+                                    </div>
+                                    <h4 class="text-center mt-5" style="color:rgba(93, 228, 17, 1)">Signature :</h4>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <div class="d-flex justify-content-center align-items-center" style="background-color:grey;color:white;width:200px;height:60px;border-radius:20px;"></div>
+                                    </div>
+                                    <div class="text-center mt-3 mb-5">
+                                        <button type="submit" class="btn text-center" style="background-color:rgba(93, 228, 17, 1);color:white;width:150px;height:35px;border-radius:7px;">Validate membership</button>
+                                    </div>
+                                </div>
+                                <div id="option3Fields" class="additional-fields" style="display:none;">
+                                    <h3 style="color:rgba(93, 228, 17, 1)">Attachments</h3>
+                                    <div class="row mt-5 w-50">
+                                        <div class="col-md-5" for="picture"><label>Your picture :</label></div>
+                                        <div class="col-md-7"><input type="file" class="form-control" name="picture" id="picture"/></div>
+                                    </div>
+                                    <div class="row mt-3 w-50">
+                                        <div class="col-md-5" for="i_card"><label>ID card :</label></div>
+                                        <div class="col-md-7"><input type="file" class="form-control" name="i_card" id="i_card"/></div>
+                                    </div>
+                                    <div class="row mt-3 w-50">
+                                        <div class="col-md-5" for="miner_card"><label>Small-scale miner card :</label></div>
+                                        <div class="col-md-7"><input type="file" class="form-control" name="miner_card" id="miner_card"/></div>
+                                    </div>
+                                    <h3 class="text-center mt-5" style="color:rgba(93, 228, 17, 1)">Membership amount per month</h3>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <div class="d-flex justify-content-center align-items-center" style="background-color:rgba(93, 228, 17, 1);color:white;width:60px;height:60px;border-radius:20px;"><span><b>10 USD</b></span></div>
+                                    </div>
+                                    <h4 class="text-center mt-5" style="color:rgba(93, 228, 17, 1)">Signature :</h4>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <div class="d-flex justify-content-center align-items-center" style="background-color:grey;color:white;width:200px;height:60px;border-radius:20px;"></div>
+                                    </div>
+                                    <div class="text-center mt-3 mb-5">
+                                        <button type="submit" class="btn text-center" style="background-color:rgba(93, 228, 17, 1);color:white;width:150px;height:35px;border-radius:7px;">Validate membership</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            const radio1 = document.getElementById('full_member');
+            const radio2 = document.getElementById('trader');
+            const radio3 = document.getElementById('mining_operator');
+            const option1Fields = document.getElementById('option1Fields');
+            const option2Fields = document.getElementById('option2Fields');
+            const option3Fields = document.getElementById('option3Fields');
+
+            function handleRadioChange() {
+                if (radio1.checked) {
+                    option1Fields.style.display = 'block';
+                    option2Fields.style.display = 'none';
+                    option3Fields.style.display = 'none';
+                } else if (radio2.checked) {
+                    option1Fields.style.display = 'none';
+                    option2Fields.style.display = 'block';
+                    option3Fields.style.display = 'none';
+                } else if (radio3.checked) {
+                    option1Fields.style.display = 'none';
+                    option2Fields.style.display = 'none';
+                    option3Fields.style.display = 'block';
+                }
+            }
+
+            radio1.addEventListener('change', handleRadioChange);
+            radio2.addEventListener('change', handleRadioChange);
+            radio3.addEventListener('change', handleRadioChange);
+        });
+    </script>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

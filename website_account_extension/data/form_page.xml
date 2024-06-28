@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <!-- Website Page -->
+        <record id="contact_form_page" model="website.page">
+            <field name="name">Comikha Contact Form</field>
+            <field name="url">/comikha-contact-form</field>
+            <field name="view_id" ref="custom_form_snippet.contact_form_comikha"/>
+            <field name="is_published">True</field>
+        </record>
+    </data>
+</odoo>

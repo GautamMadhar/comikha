@@ -9,11 +9,13 @@
     'description': """
         Generate custom report from Invoice.
     """,
-    "depends": ['web','account'],
+    "depends": ['web','account','website','contacts'],
     "data": [
         'data/report_paperformat_data.xml',
+        'data/form_page.xml',
         'views/account_report.xml',
-        
+        'views/contact_form.xml',
+        'views/res_partner.xml',   
     ],
     "application": True,
     "installable": True,

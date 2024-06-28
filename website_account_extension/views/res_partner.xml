@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<odoo>
+    <record id="comikha_res_partner_view_form_inherit" model="ir.ui.view">
+        <field name="name">comikha.res.partner.form.inherit.</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat'" position="after">
+                <field name="birth_date"/>
+                <field name="birth_place"/>
+                <field name="nationality"/>
+                <field name="occupation"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
