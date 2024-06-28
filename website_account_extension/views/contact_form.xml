@@ -2,7 +2,7 @@
     <template id="contact_form_comikha" name="Comikha Contact Form">
         <t t-call="website.layout">
             <div>
-                <img src="custom_form_snippet/static/kha1.png" alt="banner"/>
+                <img src="website_account_extension/static/kha1.png" alt="banner"/>
             </div>
             <div class="container mt-5">
                 <div class="row">

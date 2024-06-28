@@ -3,6 +3,12 @@
     <data>
         <template id="custom_comikha_header_section">
             <div class="header" t-att-style="report_header_style_extend">
+                <style>
+                    .font_14_line_height {    
+                        font-size:14px;
+                        line-height: 1.25;
+                    }
+                </style>
                 <div>
                     <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" class="float-start" alt="Logo" style="width:205px;margin-top:-30px"/>
                     <div class="float-start company_address">
@@ -10,13 +16,13 @@
                             <li style="font-size:26px;margin-top:-2px">
                                 <b>Coopérative Minière Khaff Marne (COMIKHA)</b>
                             </li>
-                            <li style="font-size:14px;line-height: 1.25;margin-top:2px;">Arrêté Ministériel n° 0030/CAB.MIN/MINES/01/2018 DU 20/01/2018</li>
-                            <li style="font-size:14px;line-height: 1.25;">Certificat d'immatriculation no 254/SGI/DAP/100/007/2021</li>
-                            <li style="font-size:14px;line-height: 1.25;">ID. NAT : 04-B0500-N8063D</li>
-                            <li style="font-size:14px;line-height: 1.25;">Adresse : No17314 du croisement des avenues Biayi et de la libération, Q/Kalubwe, C/Lubumbashi,</li>
-                            <li style="font-size:14px;line-height: 1.25;">V/Lubumbashi, Province du Haut-Katanga RDC.</li>
-                            <li style="font-size:14px;line-height: 1.25;">Téléphone : +243992865206 et 815983329</li>
-                            <li style="font-size:14px;line-height: 1.25;">E-mail : <span style="color:blue;"><u>comikha.scoop@gmail.com</u></span></li>
+                            <li class="font_14_line_height" style="margin-top:2px;">Arrêté Ministériel n° 0030/CAB.MIN/MINES/01/2018 DU 20/01/2018</li>
+                            <li class="font_14_line_height">Certificat d'immatriculation no 254/SGI/DAP/100/007/2021</li>
+                            <li class="font_14_line_height">ID. NAT : 04-B0500-N8063D</li>
+                            <li class="font_14_line_height">Adresse : No17314 du croisement des avenues Biayi et de la libération, Q/Kalubwe, C/Lubumbashi,</li>
+                            <li class="font_14_line_height">V/Lubumbashi, Province du Haut-Katanga RDC.</li>
+                            <li class="font_14_line_height">Téléphone : +243992865206 et 815983329</li>
+                            <li class="font_14_line_height">E-mail : <span style="color:blue;"><u>comikha.scoop@gmail.com</u></span></li>
                         </ul>
                         
                     </div>
@@ -38,7 +44,12 @@
         <template id="report_membership_form_view">
             <t t-call="web.external_layout">
                 <t t-set="o" t-value="o.with_context(lang=lang)" />
-                
+                <style>
+                    .dotted_line {    
+                        border-bottom: 2px dotted #000;
+                        text-decoration: none;
+                    }
+                </style>
                 <div class="container">
                     <table style="width:100%;margin-top:-20px">
                         <tr style="border: 0px;background:white">
@@ -47,27 +58,27 @@
                                 <p style="font-size: 20px;line-height: 1.8"><b>I. Identités</b></p>
                             </td>
                             <td style="width:30%;border: 0px;text-align:center;">
-                                <img src="/website_account_extension/static/src/img/profile.jpg" style="height:110px;margin-top:20px"/>
+                                <img t-att-src="image_data_uri(o.partner_id.image_1920)" style="height:110px;margin-top:20px"/>
                             </td>
                         </tr>
                     </table>
                 </div>
                 
                 <div class="container justify-text" style="font-family:sans-serif">
-                    <p style="font-size:14px;">Nom et Post-nom:………….………………………………………………….…Prénom : ………..… .………………
-                        Lieu et date de naissance :……………….…………………………Nationalité …………………..………….…..……
-                        Profession :………………………………………………….………………………..…….……….…………………..
-                        Adresse : ………………………………………………………………………………..…..…….….………………….
-                        ……………………………………………………………………………………….....…………….…………………
-                        Code postale : ……………Numéro de téléphone : ………….…………….Adresse mail : ………….….……………..</p>
+                    <p style="font-size:14px;">Nom et Post-nom: <b><span class="dotted_line"><t t-esc="o.partner_id.name"/></span></b> Prénom : <b><span class="dotted_line"><t t-esc="o.partner_id.name"/></span></b>
+                        Lieu et date de naissance :<b><span class="dotted_line"><t t-esc="o.partner_id.birth_date"/></span></b> <b><span class="dotted_line"><t t-esc="o.partner_id.birth_place"/></span></b>
+                        Nationalité : <b><span class="dotted_line"><t t-esc="o.partner_id.nationality"/></span></b>
+                        Profession : <b><span class="dotted_line"><t t-esc="o.partner_id.occupation"/></span></b> 
+                        Adresse : <b><span class="dotted_line"><t t-esc="o.partner_id.street"/> <t t-esc="o.partner_id.street2"/></span></b>
+                        Code postale : <b><span class="dotted_line"><t t-esc="o.partner_id.zip"/></span></b> Numéro de téléphone : <b><span class="dotted_line"><t t-esc="o.partner_id.phone"/></span></b> Adresse mail : <b><span class="dotted_line"><t t-esc="o.partner_id.email"/></span></b></p>
                     
                         
                     <p style="line-height: 1.8;font-size: 20px"><b>II. Informations d'adhésion.</b></p>
 
-                    <p style="font-size:14px;"><input type="checkbox"></input> Membre d'honneur de soutien
-                        <![CDATA[&emsp;]]><![CDATA[&emsp;]]><![CDATA[&emsp;]]> <input type="checkbox"></input> Membre effectif
-                        <![CDATA[&emsp;]]><![CDATA[&emsp;]]><![CDATA[&emsp;]]> <input type="checkbox"></input> Négociant
-                        <![CDATA[&emsp;]]><![CDATA[&emsp;]]><![CDATA[&emsp;]]> <input type="checkbox"></input> Exploitant minier artisanal</p>
+                    <p style="font-size:14px;"><input type="checkbox" t-att-checked="'checked' if o.partner_id.membership_info == 'supporting_honorary_member' else False"></input> Membre d'honneur de soutien
+                        <![CDATA[&emsp;]]><![CDATA[&emsp;]]><![CDATA[&emsp;]]> <input type="checkbox" t-att-checked="'checked' if o.partner_id.membership_info == 'full_member' else False"></input> Membre effectif
+                        <![CDATA[&emsp;]]><![CDATA[&emsp;]]><![CDATA[&emsp;]]> <input type="checkbox" t-att-checked="'checked' if o.partner_id.membership_info == 'trader' else False"></input> Négociant
+                        <![CDATA[&emsp;]]><![CDATA[&emsp;]]><![CDATA[&emsp;]]> <input type="checkbox" t-att-checked="'checked' if o.partner_id.membership_info == 'artisanal_mining_operator' else False"></input> Exploitant minier artisanal</p>
                     
                     <p style="font-size:14px;">Je déclare par la présente, souhaite devenir membre la Coopérative Minière Khaff Marne (COMIKHA) pour la
                         soutenir dans ses activités et projets.</p>
@@ -128,7 +139,7 @@
                     <p style="line-height: 3.5;font-size: 16px;text-align:center"><b>A remplir par l'association en deux exemplaires (une copie à remettre à l'adhérent)</b></p>
                     <p style="font-size:14px;">
                         Je, soussigné(e) …………………………………………………………, déclare par la présente avoir reçu le bulletin d'adhésion de :<br/>
-                        Prénom :……………………………………………………………………….………………….<br/>
+                        Prénom : <b><span class="dotted_line"><t t-esc="o.partner_id.name"/></span></b><br/>
                         Nom :…………………………………………………………………………………………….<br/>
                         ainsi que sa cotisation et l'ensemble des informations demandées.
                     </p>

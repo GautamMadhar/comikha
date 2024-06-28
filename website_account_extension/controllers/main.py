@@ -25,4 +25,4 @@ class WebsiteForm(http.Controller):
             #Create a new res.partner record
             partner = request.env['res.partner'].sudo().create(values)
 
-        return request.render('custom_form_snippet.contact_form_comikha', {})
+        return request.render('website_account_extension.contact_form_comikha', {})
