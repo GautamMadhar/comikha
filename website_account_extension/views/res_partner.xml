@@ -11,6 +11,7 @@
                 <field name="nationality"/>
                 <field name="occupation"/>
                 <field name="membership_info"/>
+                <field name="purpose_of_membership"/>
             </xpath>
         </field>
     </record>
